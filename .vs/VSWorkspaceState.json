@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\SingleResponsibilityPrinciple",
-    "\\SingleResponsibilityPrincipleTests"
+    "\\SingleResponsibilityPrinciple"
   ],
-  "SelectedNode": "\\SingleResponsibilityPrinciple\\TradeProcessor.cs",
+  "SelectedNode": "\\SingleResponsibilityPrinciple.sln",
   "PreviewInSolutionExplorer": false
 }

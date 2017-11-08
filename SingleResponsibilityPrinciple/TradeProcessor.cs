@@ -6,6 +6,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
+//Testing the actual project
 namespace SingleResponsibilityPrinciple
 {
     public class TradeProcessor
@@ -64,6 +65,16 @@ namespace SingleResponsibilityPrinciple
             int tradeAmount;
             if (!int.TryParse(fields[1], out tradeAmount))
             {
+                LogMessage("WARN", " Trade amount on line {0} not a valid integer: '{1}'", currentLine, fields[1]);
+                return false;
+            }
+            //These two check if the trades are within the appropriate bounds
+            if (tradeAmount<1000){
+                LogMessage("WARN", " Trade amount on line {0} not a valid integer: '{1}'", currentLine, fields[1]);
+                return false;
+            }
+
+            if (tradeAmount>100000){
                 LogMessage("WARN", " Trade amount on line {0} not a valid integer: '{1}'", currentLine, fields[1]);
                 return false;
             }
